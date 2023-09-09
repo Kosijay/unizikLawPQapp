@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +38,20 @@ class LevelFiveFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_level_five, container, false)
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // getting the employeelist
+        val semesterList=FirstOrSecond.getSemesterData()
+        // Assign employeelist to ItemAdapter
+        val itemAdapter=Adapter(semesterList)
+        // Set the LayoutManager that
+        // this RecyclerView will use.
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleView5)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        // adapter instance is set to the
+        // recyclerview to inflate the items.
+        recyclerView.adapter = itemAdapter
     }
 
     companion object {

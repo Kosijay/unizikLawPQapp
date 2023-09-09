@@ -1,8 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jay.myapplication.MainActivity"
     tools:showIn="navigation_view"
-    tools:context="com.jay.myapplication.MainActivity">
+    >
+    <group
+        android:checkableBehavior="single">
     <item
         android:id="@+id/nav_home"
         android:orderInCategory="98"
@@ -54,13 +57,17 @@
         android:orderInCategory="600">
 
         <menu>
+            <group
+                android:checkableBehavior="single"
+                >
             <item
                 android:id="@+id/action_contact"
                 android:title="@string/contact_us"
                 android:icon="@drawable/baseline_support_agent_24">
-
             </item>
+            </group>
         </menu>
 
     </item>
+    </group>
 </menu>
