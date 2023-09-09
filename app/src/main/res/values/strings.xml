@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Nav Drawer Without Basic Fragments</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <string name="_100_level">100 Level</string>
+    <string name="_200_level">200 Level</string>
+    <string name="_300_level">300 Level</string>
+    <string name="_400_level">400 Level</string>
+    <string name="_500_level">500 Level</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
