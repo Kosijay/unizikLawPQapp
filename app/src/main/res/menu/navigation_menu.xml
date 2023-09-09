@@ -6,11 +6,11 @@
     <item
         android:id="@+id/nav_home"
         android:orderInCategory="98"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/baseline_home_24"/>
 
     <item
-        android:title="Year"
+        android:title="@string/level"
         android:orderInCategory="99">
         <menu>
             <group
@@ -50,13 +50,13 @@
     </item>
 
     <item
-        android:title="Info"
+        android:title="@string/info"
         android:orderInCategory="600">
 
         <menu>
             <item
-                android:id="@+id/action_do_something"
-                android:title="Contact Us"
+                android:id="@+id/action_contact"
+                android:title="@string/contact_us"
                 android:icon="@drawable/baseline_support_agent_24">
 
             </item>

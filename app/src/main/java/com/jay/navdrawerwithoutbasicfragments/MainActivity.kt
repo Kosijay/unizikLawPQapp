@@ -23,9 +23,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView = findViewById<NavigationView>(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_open, R.string.nav_close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
 
         if (savedInstanceState == null){
             supportFragmentManager.beginTransaction()
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when(item.itemId){
             R.id.nav_home -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment()).commit()
+
             R.id.action_100level -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, LevelOneFragment()).commit()
             R.id.action_200level -> supportFragmentManager.beginTransaction()
@@ -48,6 +51,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, LevelFourFragment()).commit()
             R.id.action_500level -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, LevelFiveFragment()).commit()
+            R.id.action_contact -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ContactFragment()).commit()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
