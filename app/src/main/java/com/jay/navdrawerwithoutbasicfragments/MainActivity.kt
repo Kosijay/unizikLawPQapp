@@ -8,6 +8,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.jay.navdrawerwithoutbasicfragments.levelsfragments.LevelFiveFragment
+import com.jay.navdrawerwithoutbasicfragments.levelsfragments.LevelFourFragment
+import com.jay.navdrawerwithoutbasicfragments.levelsfragments.LevelOneFragment
+import com.jay.navdrawerwithoutbasicfragments.levelsfragments.LevelThreeFragment
+import com.jay.navdrawerwithoutbasicfragments.levelsfragments.LevelTwoFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,17 +47,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, HomeFragment()).commit()
 
             R.id.action_100level -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LevelOneFragment()).commit()
+                .replace(R.id.fragment_container, LevelOneFragment()).addToBackStack(null).commit()
             R.id.action_200level -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LevelTwoFragment()).commit()
+                .replace(R.id.fragment_container, LevelTwoFragment()).addToBackStack(null).commit()
             R.id.action_300level -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LevelThreeFragment()).commit()
+                .replace(R.id.fragment_container, LevelThreeFragment()).addToBackStack(null).commit()
             R.id.action_400level -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LevelFourFragment()).commit()
+                .replace(R.id.fragment_container, LevelFourFragment()).addToBackStack(null).commit()
             R.id.action_500level -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, LevelFiveFragment()).commit()
+                .replace(R.id.fragment_container, LevelFiveFragment()).addToBackStack(null).commit()
             R.id.action_contact -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ContactFragment()).commit()
+                .replace(R.id.fragment_container, ContactFragment()).addToBackStack(null).commit()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

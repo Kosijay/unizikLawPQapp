@@ -15,17 +15,16 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [LevelThreeFragment.newInstance] factory method to
+ * Use the [CourseFragment100First.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LevelThreeFragment : Fragment() {
+class CourseFragment100First : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.title = "300 Level"
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -37,22 +36,22 @@ class LevelThreeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_level_three, container, false)
+        return inflater.inflate(R.layout.fragment_course_100_first, container, false)
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+/*    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val semesterList=FirstOrSecond.getSemesterData()
+        val semesterList= FirstOrSecond.getCourseData1()
         // Assign employeelist to ItemAdapter
-        val itemAdapter=Adapter(semesterList)
+        val itemAdapter= Adapter(semesterList)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleView3)
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
         recyclerView.adapter = itemAdapter
-    }
+    }*/
 
     companion object {
         /**
@@ -61,12 +60,12 @@ class LevelThreeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LevelThreeFragment.
+         * @return A new instance of fragment CourseFragment100First.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LevelThreeFragment().apply {
+            CourseFragment100First().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

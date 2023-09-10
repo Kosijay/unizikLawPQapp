@@ -1,13 +1,15 @@
-package com.jay.navdrawerwithoutbasicfragments
+package com.jay.navdrawerwithoutbasicfragments.levelsfragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.jay.navdrawerwithoutbasicfragments.Adapter
+import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
+import com.jay.navdrawerwithoutbasicfragments.R
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -43,9 +45,9 @@ class LevelTwoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val semesterList=FirstOrSecond.getSemesterData()
+        val semesterList= FirstOrSecond.getSemesterData()
         // Assign employeelist to ItemAdapter
-        val itemAdapter=Adapter(semesterList)
+        val itemAdapter= Adapter(semesterList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.recycleView2)

@@ -1,13 +1,15 @@
-package com.jay.navdrawerwithoutbasicfragments
+package com.jay.navdrawerwithoutbasicfragments.levelsfragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.jay.navdrawerwithoutbasicfragments.Adapter
+import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
+import com.jay.navdrawerwithoutbasicfragments.R
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -15,17 +17,17 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [LevelFourFragment.newInstance] factory method to
+ * Use the [LevelFiveFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LevelFourFragment : Fragment() {
+class LevelFiveFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.title = "400 Level"
+        activity?.title = "500 Level"
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -37,17 +39,17 @@ class LevelFourFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_level_four, container, false)
+        return inflater.inflate(R.layout.fragment_level_five, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val semesterList=FirstOrSecond.getSemesterData()
+        val semesterList= FirstOrSecond.getSemesterData()
         // Assign employeelist to ItemAdapter
-        val itemAdapter=Adapter(semesterList)
+        val itemAdapter= Adapter(semesterList)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleView4)
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleView5)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
@@ -61,12 +63,12 @@ class LevelFourFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LevelFourFragment.
+         * @return A new instance of fragment LevelFiveFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LevelFourFragment().apply {
+            LevelFiveFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
