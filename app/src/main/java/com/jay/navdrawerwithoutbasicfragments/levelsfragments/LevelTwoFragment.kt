@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter
+import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter100
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
+import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter200
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -47,15 +49,16 @@ class LevelTwoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
         val semesterList= FirstOrSecond.getSemesterData()
+//        TODO Change getSemesterData to one specific to 200
         // Assign employeelist to ItemAdapter
-        val itemSemesterAdapter= SemesterAdapter(semesterList)
+        val itemSemesterAdapter200= SemesterAdapter200(semesterList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.recycleView2)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
-        recyclerView.adapter = itemSemesterAdapter
+        recyclerView.adapter = itemSemesterAdapter200
     }
 
     companion object {

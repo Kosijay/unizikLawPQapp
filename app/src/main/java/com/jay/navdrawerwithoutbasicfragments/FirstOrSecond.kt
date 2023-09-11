@@ -25,7 +25,7 @@ object FirstOrSecond {
         semesterList.add(sem2)
         return  semesterList
     }
-    fun getCourseData1():ArrayList<Semester>{
+    fun getCourseData100I():ArrayList<Semester>{
         // create an arraylist of type Semester class for what course
         val courseList=ArrayList<Semester>()
         val course1=Semester("Nigerian Legal Methods I")
@@ -42,7 +42,7 @@ object FirstOrSecond {
         courseList.add(course6)
         return  courseList
     }
-    fun getCourseData2():ArrayList<Semester>{
+    fun getCourseData100II():ArrayList<Semester>{
         // create an arraylist of type Semester class for what course
         val courseList=ArrayList<Semester>()
         val course1=Semester("Nigerian Legal Methods II")
@@ -59,4 +59,163 @@ object FirstOrSecond {
         courseList.add(course6)
         return  courseList
     }
+    fun getCourseData200I():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Law of Contract I")
+        courseList.add(course1)
+        val sem2=Semester("Constitutional Law I")
+        courseList.add(sem2)
+        val course3=Semester("Law of Torts I")
+        courseList.add(course3)
+        val course4=Semester("Nigerian Legal System I")
+        courseList.add(course4)
+        val course5=Semester("Psychology I")
+        courseList.add(course5)
+        val course6=Semester("Introduction to Sociology I")
+        courseList.add(course6)
+        return  courseList
+    }
+    fun getCourseData200II():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Law of Contract II")
+        courseList.add(course1)
+        val sem2=Semester("Constitutional Law II")
+        courseList.add(sem2)
+        val course3=Semester("Law of Torts II")
+        courseList.add(course3)
+        val course4=Semester("Nigerian Legal System II")
+        courseList.add(course4)
+        val course5=Semester("Psychology II")
+        courseList.add(course5)
+        val course6=Semester("Introduction to Sociology II")
+        courseList.add(course6)
+        return  courseList
+    }
+    fun getCourseData300I():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Criminal Law I")
+        courseList.add(course1)
+        val sem2=Semester("Commercial Law I")
+        courseList.add(sem2)
+        val course3=Semester("Principles of Accounting I")
+        courseList.add(course3)
+        val course4=Semester("Industrial/Labour Law I")
+        courseList.add(course4)
+        val course5=Semester("Law of Banking and Insurance I")
+        courseList.add(course5)
+        val course6=Semester("Law of Intellectual Property I")
+        courseList.add(course6)
+        return  courseList
+    }
+    fun getCourseData300II():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Criminal Law II")
+        courseList.add(course1)
+        val sem2=Semester("Commercial Law II")
+        courseList.add(sem2)
+        val course3=Semester("Principles of Accounting II")
+        courseList.add(course3)
+        val course4=Semester("Industrial/Labour Law II")
+        courseList.add(course4)
+        val course5=Semester("Law of Banking and Insurance II")
+        courseList.add(course5)
+        val course6=Semester("Law of Intellectual Property II")
+        courseList.add(course6)
+        return  courseList
+    }   fun getCourseData400I():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Introduction to Political Science I")
+        courseList.add(course1)
+        val sem2=Semester("Property/Land Law I")
+        courseList.add(sem2)
+        val course3=Semester("Equity & Trusts I")
+        courseList.add(course3)
+        val course4=Semester("Law of Evidence I")
+        courseList.add(course4)
+        val course5=Semester("Women & Minority Rights I")
+        courseList.add(course5)
+        val course6=Semester("Law of Energy & Natural Resources I")
+        courseList.add(course6)
+        val course7=Semester("Administrative Law I")
+        courseList.add(course7)
+        val course8=Semester("Law of Arbitration I")
+        courseList.add(course8)
+        val course9=Semester("Maritime Law I")
+        courseList.add(course9)
+
+        return  courseList
+    }   fun getCourseData400II():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Introduction to Political Science II")
+        courseList.add(course1)
+        val sem2=Semester("Property/Land Law II")
+        courseList.add(sem2)
+        val course3=Semester("Equity & Trusts II")
+        courseList.add(course3)
+        val course4=Semester("Law of Evidence II")
+        courseList.add(course4)
+        val course5=Semester("Women & Minority Rights II")
+        courseList.add(course5)
+        val course6=Semester("Law of Energy & Natural Resources II")
+        courseList.add(course6)
+        val course7=Semester("Administrative Law II")
+        courseList.add(course7)
+        val course8=Semester("Law of Arbitration II")
+        courseList.add(course8)
+        val course9=Semester("Maritime Law II")
+        courseList.add(course9)
+        return  courseList
+    }
+    fun getCourseData500I():ArrayList<Semester>{
+        // create an arraylist of type Semester class for what course
+        val courseList=ArrayList<Semester>()
+        val course1=Semester("Jurisprudence & Legal Theory I")
+        courseList.add(course1)
+        val sem2=Semester("Company Law I")
+        courseList.add(sem2)
+        val course3=Semester("Clinical Legal Education I")
+        courseList.add(course3)
+        val course4=Semester("Environmental & Planning Law I")
+        courseList.add(course4)
+        val course5=Semester("Conveyancing Law I")
+        courseList.add(course5)
+        val course6=Semester("Public International Law I")
+        courseList.add(course6)
+        val course7=Semester("Introduction to Advocacy I")
+        courseList.add(course7)
+        val course8=Semester("Family Law I")
+        courseList.add(course8)
+        val course9=Semester("Law of Taxation I")
+        courseList.add(course9)
+        return  courseList
+    }   fun getCourseData500II():ArrayList<Semester> {
+        // create an arraylist of type Semester class for what course
+        val courseList = ArrayList<Semester>()
+        val course1 = Semester("Jurisprudence & Legal Theory I")
+        courseList.add(course1)
+        val sem2 = Semester("Company Law I")
+        courseList.add(sem2)
+        val course3 = Semester("Clinical Legal Education I")
+        courseList.add(course3)
+        val course4 = Semester("Environmental & Planning Law I")
+        courseList.add(course4)
+        val course5 = Semester("Conveyancing Law I")
+        courseList.add(course5)
+        val course6 = Semester("Public International Law I")
+        courseList.add(course6)
+        val course7 = Semester("Introduction to Advocacy I")
+        courseList.add(course7)
+        val course8 = Semester("Family Law I")
+        courseList.add(course8)
+        val course9 = Semester("Law of Taxation I")
+        courseList.add(course9)
+        return courseList
+    }
+
 }

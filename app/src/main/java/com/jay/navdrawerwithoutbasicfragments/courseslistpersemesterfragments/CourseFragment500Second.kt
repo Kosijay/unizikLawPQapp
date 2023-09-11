@@ -1,16 +1,15 @@
-package com.jay.navdrawerwithoutbasicfragments.levelsfragments
+package com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter100
+import com.jay.navdrawerwithoutbasicfragments.CoursesAdapter
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
-import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter300
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,17 +18,16 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [LevelThreeFragment.newInstance] factory method to
+ * Use the [CourseFragment500Second.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LevelThreeFragment : Fragment() {
+class CourseFragment500Second : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.title = "300 Level"
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -41,22 +39,24 @@ class LevelThreeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        activity?.title = "300 Level"
-        return inflater.inflate(R.layout.fragment_level_three, container, false)
+        return inflater.inflate(R.layout.fragment_course_500_second, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val semesterList= FirstOrSecond.getSemesterData()
+        val courseList= FirstOrSecond.getCourseData500II()
+        //        TODO Change getCourseData to one specific to level
+
         // Assign employeelist to ItemAdapter
-        val itemSemesterAdapter300= SemesterAdapter300(semesterList)
+        val itemAdapter= CoursesAdapter(courseList)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleView3)
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse500II)
+        //TODO Change Id to the current Id year and semester
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
-        recyclerView.adapter = itemSemesterAdapter300
+        recyclerView.adapter = itemAdapter
     }
 
     companion object {
@@ -66,12 +66,12 @@ class LevelThreeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LevelThreeFragment.
+         * @return A new instance of fragment CourseFragment500Second.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LevelThreeFragment().apply {
+            CourseFragment500Second().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
