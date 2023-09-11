@@ -2,6 +2,20 @@ package com.jay.navdrawerwithoutbasicfragments
 
 object FirstOrSecond {
     // Arraylist and return the Arraylist
+    fun getLevels():ArrayList<Semester>{
+        val level = ArrayList<Semester>()
+        val level1 = Semester("100 Level")
+        level.add(level1)
+        val level2 = Semester("200 Level")
+        level.add(level2)
+        val level3 = Semester("300 Level")
+        level.add(level3)
+        val level4 = Semester("400 Level")
+        level.add(level4)
+        val level5 = Semester("500 Level")
+        level.add(level5)
+        return level
+    }
     fun getSemesterData():ArrayList<Semester>{
         // create an arraylist of type Semester class for what Semester
         val semesterList=ArrayList<Semester>()

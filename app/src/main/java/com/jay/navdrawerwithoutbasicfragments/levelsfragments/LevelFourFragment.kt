@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.Adapter
+import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
 // TODO: Rename parameter arguments, choose names that match
@@ -39,6 +39,7 @@ class LevelFourFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        activity?.title = "400 Level"
         return inflater.inflate(R.layout.fragment_level_four, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,14 +47,14 @@ class LevelFourFragment : Fragment() {
         // getting the employeelist
         val semesterList= FirstOrSecond.getSemesterData()
         // Assign employeelist to ItemAdapter
-        val itemAdapter= Adapter(semesterList)
+        val itemSemesterAdapter= SemesterAdapter(semesterList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.recycleView4)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
-        recyclerView.adapter = itemAdapter
+        recyclerView.adapter = itemSemesterAdapter
     }
 
     companion object {

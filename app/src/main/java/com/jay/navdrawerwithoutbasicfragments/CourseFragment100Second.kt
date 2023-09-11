@@ -38,20 +38,20 @@ class CourseFragment100Second : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_course_100_second, container, false)
     }
-/*    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val semesterList= FirstOrSecond.getCourseData2()
+        val courseList= FirstOrSecond.getCourseData2()
         // Assign employeelist to ItemAdapter
-        val itemAdapter= Adapter(semesterList)
+        val itemAdapter= CoursesAdapter(courseList)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse)
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse100II)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
         recyclerView.adapter = itemAdapter
-    }*/
+    }
 
     companion object {
         /**

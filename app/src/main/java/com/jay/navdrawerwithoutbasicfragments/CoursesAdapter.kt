@@ -7,8 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapter(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<Adapter.MyViewHolder>(){
-    // This method creates a new ViewHolder object for each item in the RecyclerView
+class CoursesAdapter (private val courseList: ArrayList<Semester>)  : RecyclerView.Adapter<CoursesAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         // Inflate the layout for each item and return a new ViewHolder object
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.semester_list, parent, false)
@@ -17,27 +16,18 @@ class Adapter(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<
     // This method returns the total
     // number of items in the data set
     override fun getItemCount(): Int {
-        return semList.size
+        return courseList.size
     }
 
     // This method binds the data to the ViewHolder object
     // for each item in the RecyclerView
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentSem = semList[position]
-        holder.semester.text = currentSem.whatSemester
-        holder.itemView.setOnClickListener(object :View.OnClickListener{
+        val currentCourse = courseList[position]
+        holder.semester.text = currentCourse.whatSemester
+        //Next, implementing what happens when the recyclerview is clicked
+        holder.itemView.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
-                val activity = v!!.context as AppCompatActivity
-                if (position == 0) {
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, CourseFragment100First())
-                        .addToBackStack(null).commit()
-                }
-                if (position == 1) {
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, CourseFragment100Second())
-                        .addToBackStack(null).commit()
-                }
+
             }
         })
     }
