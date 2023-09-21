@@ -14,7 +14,7 @@ class SemesterAdapter300(private val semList: ArrayList<Semester>)  : RecyclerVi
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): SemesterAdapter300.MyViewHolder {
+    ): MyViewHolder {
         // Inflate the layout for each item and return a new ViewHolder object
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.semester_list, parent, false)
