@@ -25,6 +25,30 @@ object FirstOrSecond {
         semesterList.add(sem2)
         return  semesterList
     }
+    fun getSessionData():ArrayList<Semester>{
+        val sessionList = ArrayList<Semester>()
+        val sess1 = Semester("2013/2014")
+        sessionList.add(sess1)
+        val sess2 = Semester("2014/2015")
+        sessionList.add(sess2)
+        val sess3 = Semester("2015/2016")
+        sessionList.add(sess3)
+        val sess4 = Semester("2016/2017")
+        sessionList.add(sess4)
+        val sess5 = Semester("2017/2018")
+        sessionList.add(sess5)
+        val sess6 = Semester("2018/2019")
+        sessionList.add(sess6)
+        val sess7 = Semester("2019/2020")
+        sessionList.add(sess7)
+        val sess8 = Semester("2020/2021")
+        sessionList.add(sess8)
+        val sess9 = Semester("2021/2022")
+        sessionList.add(sess9)
+        val sess10 = Semester("2022/2023")
+        sessionList.add(sess10)
+        return sessionList
+    }
     fun getCourseData100I():ArrayList<Semester>{
         // create an arraylist of type Semester class for what course
         val courseList=ArrayList<Semester>()

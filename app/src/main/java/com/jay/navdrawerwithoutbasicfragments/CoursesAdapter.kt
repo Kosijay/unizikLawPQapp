@@ -6,8 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100First
+import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100Second
 
-class CoursesAdapter (private val courseList: ArrayList<Semester>)  : RecyclerView.Adapter<CoursesAdapter.MyViewHolder>() {
+class CoursesAdapter (private val courseList: ArrayList<Semester>)  :
+    RecyclerView.Adapter<CoursesAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         // Inflate the layout for each item and return a new ViewHolder object
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.semester_list, parent, false)
@@ -27,6 +30,11 @@ class CoursesAdapter (private val courseList: ArrayList<Semester>)  : RecyclerVi
         //Next, implementing what happens when the recyclerview is clicked
         holder.itemView.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
+                val activity = v!!.context as AppCompatActivity
+                activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, SessionFragment())
+                        .addToBackStack(null).commit()
+
 
             }
         })

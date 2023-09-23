@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100First
 import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100Second
 
-class SemesterAdapter100(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<SemesterAdapter100.MyViewHolder>(){
+class SemesterAdapter100(private val semList: ArrayList<Semester>)  :
+    RecyclerView.Adapter<SemesterAdapter100.MyViewHolder>(){
     // This method creates a new ViewHolder object for each item in the RecyclerView
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
             // Inflate the layout for each item and return a new ViewHolder object
