@@ -25,7 +25,7 @@ object FirstOrSecond {
         semesterList.add(sem2)
         return  semesterList
     }
-    fun getSessionData():ArrayList<Semester>{
+/*    fun getSessionData():ArrayList<Semester>{
         val sessionList = ArrayList<Semester>()
         val sess1 = Semester("2013/2014")
         sessionList.add(sess1)
@@ -48,7 +48,7 @@ object FirstOrSecond {
         val sess10 = Semester("2022/2023")
         sessionList.add(sess10)
         return sessionList
-    }
+    }*/
     fun getCourseData100I():ArrayList<Semester>{
         // create an arraylist of type Semester class for what course
         val courseList=ArrayList<Semester>()
@@ -218,7 +218,8 @@ object FirstOrSecond {
         val course9=Semester("Law of Taxation I")
         courseList.add(course9)
         return  courseList
-    }   fun getCourseData500II():ArrayList<Semester> {
+    }
+    fun getCourseData500II():ArrayList<Semester> {
         // create an arraylist of type Semester class for what course
         val courseList = ArrayList<Semester>()
         val course1 = Semester("Jurisprudence & Legal Theory I")
@@ -241,5 +242,28 @@ object FirstOrSecond {
         courseList.add(course9)
         return courseList
     }
+    fun getQuestions():ArrayList<QuestionsFormat> {
+        val questionsList = ArrayList<QuestionsFormat>()
+        val ques1 = QuestionsFormat("Labour Law", "2022/2023", "First Semester", "SECTION A\n" +
+                "No 1\n" +
+                "a.The Labour Act of Nigeria makes provisions regulating the practice of apprenticeship in Nigeria. These provisions are defcient on several observable grounds. Discuss them highlighting the positions in Ghana and South Africa.\n" +
+                "b.Discuss briefly the prerogative remedies.\n" +
+                "No. 2\n" +
+                "a. Discuss the ratio decidendi in Chukwumah v Shell (1993) 4 N.W.L.R ( Pt289)12\n" +
+                "b. Discuss briefly remedies of injunction and recission\n" +
+                "c. List the International Standards on contracts of apprenticeship.\n" +
+                "\n" +
+                "SECTION B\n" +
+                "1. It is a known fact that once parties to a contract of employment expressly agree on any particular terms and conditions, they are bound by them and are so bound until they mutually agree to vary them. It also a fact that once fully entered into, the contract of employment is enforceable and ought to be treated with sanctity as to what the parties intended and that if any question arises in that respect, it is the contract document itself that must be interpreted to decide the question.\n" +
+                "a.With the aid of statutory authorities and case law (if any) discuss the veracity of the facts stated above.\n" +
+                "b. It is also a fact that there are terms which the parties may not have agreed upon but which still form part of the terms expressed in a contract of employiment. List and explain (3) three of such other terms that you know.\n" +
+                "2. The duty of an employer not to provide work is not devoid of any exceptions and thus depends on the nature of the employment and so could amount to a breach of the contract of employment. With the aid of case law, critically discuss the above and any (3) three other duties of the employer under common law.\n" +
+                "SECTION C\n" +
+                "1. A contract of employment, like all other contracts, is governed by the general law of contract. Therefore, all the essential features which characterize ordinary contracts must be present in a contract of employment before it can be said to be a valid contract of service. With the use of case Law and statutory provisions, discuss the basic element of the formation of a contract of Employment.\n" +
+                "2. The premise for the determination of the nature of a contract of employment could be determined by establishing the particular type of employment contract entered into by the parties. It is essential to argue that the protection offered by the Labour Act is only for those under a contract of service commonly referred to as “employees” and not those under a contract for services often described as “independent contractors or self-employed persons.” Over the years several tests have been propounded by jurists and legal scholars for the purpose of determining the nature of contract of employment entered into by the parties. With the aid of decided cases elucidate on these tests.")
+        questionsList.add(ques1)
+        return questionsList
+    }
 
-}
+
+    }

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
 
-class SessionAdapter(private val sessionList: ArrayList<Semester>):
+class SessionAdapter(private val questionsList: ArrayList<QuestionsFormat>):
     RecyclerView.Adapter<SessionAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -18,12 +18,12 @@ class SessionAdapter(private val sessionList: ArrayList<Semester>):
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentSession = sessionList[position]
-        holder.session.text = currentSession.whatSemester
+        val currentSession = questionsList[position]
+        holder.session.text = currentSession.session
         holder.itemView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
-                    activity.supportFragmentManager.beginTransaction()
+                activity.supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, QuestionsFragment())
                         .addToBackStack(null).commit()
             }
@@ -34,7 +34,7 @@ class SessionAdapter(private val sessionList: ArrayList<Semester>):
     // This method returns the total
     // number of items in the data set
     override fun getItemCount(): Int {
-        return sessionList.size
+        return questionsList.size
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){

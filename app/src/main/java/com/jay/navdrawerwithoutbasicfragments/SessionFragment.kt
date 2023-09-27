@@ -42,9 +42,9 @@ class SessionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val sessionList= FirstOrSecond.getSessionData()
+        val questionsList = FirstOrSecond.getQuestions()
         // Assign employeelist to ItemAdapter
-        val itemSessionAdapter= SessionAdapter(sessionList)
+        val itemSessionAdapter= SessionAdapter(questionsList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.session)

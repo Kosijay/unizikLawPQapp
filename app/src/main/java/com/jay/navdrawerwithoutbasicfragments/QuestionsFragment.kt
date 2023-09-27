@@ -1,11 +1,11 @@
 package com.jay.navdrawerwithoutbasicfragments
 
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,6 +18,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class QuestionsFragment : Fragment() {
+    var POSITION_NOT_SET = -1
+    private var questionPosition = POSITION_NOT_SET
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,13 +37,55 @@ class QuestionsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        activity?.title = "Questions"
 
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_questions, container, false)
     }
-    
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        activity?.title = "Questions"
+
+        class TestRun(val questionsList: ArrayList<QuestionsFormat>){
+
+            fun outOfPatience(position:Int){
+                val currentData = questionsList[position]
+                val title = view.findViewById<TextView>(R.id.CourseTitle)
+                val session = view.findViewById<TextView>(R.id.YearOrSession)
+                val semester = view.findViewById<TextView>(R.id.firstOrSecondSemester)
+                val questions = view.findViewById<TextView>(R.id.Questions)
+                title.text = currentData.courseTitle
+                session.text = currentData.session
+                semester.text = currentData.semester
+                questions.text = currentData.questions
+            }
+
+        }
+
+        TestRun(FirstOrSecond.getQuestions()).outOfPatience(0)
+
+//        if (savedInstanceState != null) {
+//            questionPosition = savedInstanceState.getInt(EXTRA_QUESTION_POSITION, POSITION_NOT_SET)
+//        }
+//        if (questionPosition != POSITION_NOT_SET)
+
+    }
+/*
+    fun displayQuestions(){
+        val test = FirstOrSecond.getQuestions()
+        val question = test[questionPosition]
+        val title = view?.findViewById<TextView>(R.id.CourseTitle)
+        val session = view?.findViewById<TextView>(R.id.YearOrSession)
+        val semester = view?.findViewById<TextView>(R.id.firstOrSecondSemester)
+        val questions = view?.findViewById<TextView>(R.id.Questions)
+        title?.text = question.courseTitle
+        session?.text = question.session
+        semester?.text = question.semester
+        questions?.text = question.questions
+    }
+*/
+
 
     companion object {
        /**
