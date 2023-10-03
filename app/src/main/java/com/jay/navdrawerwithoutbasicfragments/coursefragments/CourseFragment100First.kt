@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments
+package com.jay.navdrawerwithoutbasicfragments.coursefragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,10 +18,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [CourseFragment300First.newInstance] factory method to
+ * Use the [CourseFragment100First.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CourseFragment300First : Fragment() {
+class CourseFragment100First : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -39,20 +39,17 @@ class CourseFragment300First : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_course_300_first, container, false)
+        return inflater.inflate(R.layout.fragment_course_100_first, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val courseList= FirstOrSecond.getCourseData300I()
-        //        TODO Change getCourseData to one specific to level
-
+        val courseList= FirstOrSecond.getCourseData100I()
         // Assign employeelist to ItemAdapter
         val itemAdapter= CoursesAdapter(courseList)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse300I)
-        //TODO Change Id to the current Id year and semester
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse100I)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
@@ -66,12 +63,12 @@ class CourseFragment300First : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CourseFragment300First.
+         * @return A new instance of fragment CourseFragment100First.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CourseFragment300First().apply {
+            CourseFragment100First().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

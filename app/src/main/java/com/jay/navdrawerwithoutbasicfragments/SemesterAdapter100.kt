@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100First
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100Second
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment100First
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment100Second
 
 class SemesterAdapter100(private val semList: ArrayList<Semester>)  :
     RecyclerView.Adapter<SemesterAdapter100.MyViewHolder>(){
@@ -31,6 +31,7 @@ class SemesterAdapter100(private val semList: ArrayList<Semester>)  :
         holder.itemView.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
+
                 if (position == 0) {
                     activity.supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, CourseFragment100First())

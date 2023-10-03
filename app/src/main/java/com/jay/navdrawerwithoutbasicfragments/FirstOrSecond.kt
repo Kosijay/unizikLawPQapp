@@ -262,6 +262,32 @@ object FirstOrSecond {
                 "1. A contract of employment, like all other contracts, is governed by the general law of contract. Therefore, all the essential features which characterize ordinary contracts must be present in a contract of employment before it can be said to be a valid contract of service. With the use of case Law and statutory provisions, discuss the basic element of the formation of a contract of Employment.\n" +
                 "2. The premise for the determination of the nature of a contract of employment could be determined by establishing the particular type of employment contract entered into by the parties. It is essential to argue that the protection offered by the Labour Act is only for those under a contract of service commonly referred to as “employees” and not those under a contract for services often described as “independent contractors or self-employed persons.” Over the years several tests have been propounded by jurists and legal scholars for the purpose of determining the nature of contract of employment entered into by the parties. With the aid of decided cases elucidate on these tests.")
         questionsList.add(ques1)
+        val ques2 = QuestionsFormat("Psychology", "2021/2022", "First Semester", "1. \n" +
+                "Briefly define Forensic Psychology, \n" +
+                "b. \n" +
+                "What are the duties of a Forensic Psychologist, as it relates to Psychology and Law?\n" +
+                "c. \n" +
+                "Differentiate between a psychologist and psychiatrist\n" +
+                "2. \n" +
+                "Psychology as the study of I unconscious processes; following this view, mention and discuss the technique which was adopted by Sigmund Freud to treat patients with medically unexplainable symptoms.\n" +
+                "b. \n" +
+                "Define personality and explain its structures as were propounded by Freud.\n" +
+                "3 \n" +
+                "People who do not consider their actions whether injurious to self or others can be said to be guided by the id' principles. Use the cases of yahoo boys (internet\n" +
+                "fraudsters) to further justify this claim.\n" +
+                "b. \n" +
+                "Briefly explain drive reduction theory?\n" +
+                "4 \n" +
+                "In expression of emotions in man and animals, Charles Darwin argued that all people express certain basic feelings in the same ways. Enumerate and briefly comment on the basic feelings as it affects people of all races.\n" +
+                "b\n" +
+                "With aid of a good diagram, describe Maslow's hierarchy of Needs as a Social Motive Theory\n" +
+                "5\n" +
+                "What part of the brain if punctured will result in the animal eating excessively or starvation?\n" +
+                "b \n" +
+                "Write a short note on the following: (a) Anorexia Nervosa, (b) Bulimia (c) Homeostasis\n" +
+                "\n" +
+                "\n")
+        questionsList.add(ques2)
         return questionsList
     }
 

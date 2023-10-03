@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100First
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment100Second
 
 class CoursesAdapter (private val courseList: ArrayList<Semester>)  :
     RecyclerView.Adapter<CoursesAdapter.MyViewHolder>() {

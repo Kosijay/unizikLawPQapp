@@ -8,5 +8,4 @@ data class QuestionsFormat (
     val courseTitle : String,
     val session : String,
     val semester : String,
-    val questions : String
-        ):java.io.Serializable
+    val questions : String)

@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment500First
-import com.jay.navdrawerwithoutbasicfragments.courseslistpersemesterfragments.CourseFragment500Second
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment500First
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment500Second
 
 class SemesterAdapter500(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<SemesterAdapter500.MyViewHolder>()  {
     // This method creates a new ViewHolder object for each item in the RecyclerView
