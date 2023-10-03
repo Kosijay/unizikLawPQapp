@@ -50,7 +50,7 @@ class SessionFragment : Fragment(), SessionAdapter.ItemsInterClickListener{
     }
 
     override fun onItemClick(questionsFormat: QuestionsFormat) {
-        val fragment: Fragment = QuestionsFragment.newInstance(questionsFormat.courseTitle,questionsFormat.session, questionsFormat.semester,questionsFormat.session)
+        val fragment: Fragment = QuestionsFragment.newInstance(questionsFormat.courseTitle,questionsFormat.session, questionsFormat.semester,questionsFormat.questions)
         val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container,fragment,"questions_fragment")
         transaction.addToBackStack(null)
