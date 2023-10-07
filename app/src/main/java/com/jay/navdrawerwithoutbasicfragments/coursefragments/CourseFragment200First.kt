@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jay.navdrawerwithoutbasicfragments.CourseAdapter200I
 import com.jay.navdrawerwithoutbasicfragments.CoursesAdapter
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
@@ -49,7 +50,7 @@ class CourseFragment200First : Fragment() {
         //        TODO Change getCourseData to one specific to 200
 
         // Assign employeelist to ItemAdapter
-        val itemAdapter= CoursesAdapter(courseList)
+        val itemAdapter= CourseAdapter200I(courseList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse200I)
