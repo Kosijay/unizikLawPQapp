@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jay.navdrawerwithoutbasicfragments.CourseAdapter300I
 import com.jay.navdrawerwithoutbasicfragments.CoursesAdapter
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
@@ -38,6 +39,7 @@ class CourseFragment300First : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title = "300 Level - Select Course"
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_course_300_first, container, false)
     }
@@ -48,7 +50,7 @@ class CourseFragment300First : Fragment() {
         //        TODO Change getCourseData to one specific to level
 
         // Assign employeelist to ItemAdapter
-        val itemAdapter= CoursesAdapter(courseList)
+        val itemAdapter= CourseAdapter300I(courseList)
         // Set the LayoutManager that
         // this RecyclerView will use.
         val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse300I)

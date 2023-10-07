@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments
+package com.jay.navdrawerwithoutbasicfragments.semesteradapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment500First
-import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment500Second
+import com.jay.navdrawerwithoutbasicfragments.R
+import com.jay.navdrawerwithoutbasicfragments.Semester
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment400First
+import com.jay.navdrawerwithoutbasicfragments.coursefragments.CourseFragment400Second
 
-class SemesterAdapter500(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<SemesterAdapter500.MyViewHolder>()  {
+class SemesterAdapter400(private val semList: ArrayList<Semester>)  : RecyclerView.Adapter<SemesterAdapter400.MyViewHolder>()  {
     // This method creates a new ViewHolder object for each item in the RecyclerView
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -29,12 +31,12 @@ class SemesterAdapter500(private val semList: ArrayList<Semester>)  : RecyclerVi
                 val activity = v!!.context as AppCompatActivity
                 if (position == 0) {
                     activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, CourseFragment500First())
+                        .replace(R.id.fragment_container, CourseFragment400First())
                         .addToBackStack(null).commit()
                 }
                 if (position == 1) {
                     activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, CourseFragment500Second())
+                        .replace(R.id.fragment_container, CourseFragment400Second())
                         .addToBackStack(null).commit()
                 }
             }

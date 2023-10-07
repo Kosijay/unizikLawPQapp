@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter100
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
 import com.jay.navdrawerwithoutbasicfragments.R
-import com.jay.navdrawerwithoutbasicfragments.SemesterAdapter300
+import com.jay.navdrawerwithoutbasicfragments.semesteradapters.SemesterAdapter300
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +28,6 @@ class LevelThreeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activity?.title = "300 Level"
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -41,7 +39,7 @@ class LevelThreeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        activity?.title = "300 Level"
+        activity?.title = "300 Level - Select Semester"
         return inflater.inflate(R.layout.fragment_level_three, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

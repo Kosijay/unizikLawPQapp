@@ -38,6 +38,7 @@ class CourseFragment300Second : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title = "300 Level - Select Course"
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_course_300_second, container, false)
     }

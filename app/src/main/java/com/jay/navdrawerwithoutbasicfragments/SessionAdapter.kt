@@ -46,8 +46,8 @@ class SessionAdapter(questionsList: ArrayList<QuestionsFormat>, clickListener: I
         val session: TextView = itemView.findViewById(R.id.semesterSelect)
     }
 
-      interface ItemsInterClickListener{
-          fun onItemClick(questionsFormat: QuestionsFormat)
-      }
+//      interface ItemsInterClickListener{
+//          fun onItemClick(questionsFormat: QuestionsFormat)
+//      }
 
 }

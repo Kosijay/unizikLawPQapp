@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class SessionFragment : Fragment(), SessionAdapter.ItemsInterClickListener{
+class SessionFragment : Fragment(), ItemsInterClickListener{
     private val questionsList: ArrayList<QuestionsFormat> = ArrayList<QuestionsFormat>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class SessionFragment : Fragment(), SessionAdapter.ItemsInterClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestions()
+        val questionsList = FirstOrSecond.getQuestions300I()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
