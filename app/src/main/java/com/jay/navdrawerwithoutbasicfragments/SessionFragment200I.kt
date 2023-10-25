@@ -43,7 +43,7 @@ class SessionFragment200I : Fragment(), ItemsInterClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestions200I()
+        val questionsList = FirstOrSecond.getQuestionsPsychoI()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that

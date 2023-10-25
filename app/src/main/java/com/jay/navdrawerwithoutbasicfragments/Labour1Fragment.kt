@@ -28,7 +28,7 @@ class Labour1Fragment : Fragment(), ItemsInterClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestions300I()
+        val questionsList = FirstOrSecond.getQuestionsLabourI()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that

@@ -27,6 +27,7 @@ class Psycho1Fragment : Fragment(), ItemsInterClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title = "Select Year"
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_psycho1, container, false)
     }
@@ -34,7 +35,7 @@ class Psycho1Fragment : Fragment(), ItemsInterClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestions200I()
+        val questionsList = FirstOrSecond.getQuestionsPsychoI()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
