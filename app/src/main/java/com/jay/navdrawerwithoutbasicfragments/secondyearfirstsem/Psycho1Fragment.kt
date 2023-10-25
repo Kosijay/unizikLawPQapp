@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments
+package com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
+import com.jay.navdrawerwithoutbasicfragments.ItemsInterClickListener
+import com.jay.navdrawerwithoutbasicfragments.QuestionsFormat
+import com.jay.navdrawerwithoutbasicfragments.QuestionsFragment
+import com.jay.navdrawerwithoutbasicfragments.R
+import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
 class Psycho1Fragment : Fragment(), ItemsInterClickListener {
 
@@ -59,7 +65,12 @@ class Psycho1Fragment : Fragment(), ItemsInterClickListener {
     }
 
     override fun onItemClick(questionsFormat: QuestionsFormat) {
-        val fragment: Fragment = QuestionsFragment.newInstance(questionsFormat.courseTitle,questionsFormat.session, questionsFormat.semester,questionsFormat.questions)
+        val fragment: Fragment = QuestionsFragment.newInstance(
+            questionsFormat.courseTitle,
+            questionsFormat.session,
+            questionsFormat.semester,
+            questionsFormat.questions
+        )
         val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container,fragment,"questions_fragment")
         transaction.addToBackStack(null)
