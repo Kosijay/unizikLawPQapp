@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem
+package com.jay.navdrawerwithoutbasicfragments.secondyear
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,7 +16,9 @@ import com.jay.navdrawerwithoutbasicfragments.R
 import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
 
-class LegalSystem1Fragment : Fragment(),ItemsInterClickListener {
+class Contract1Fragment : Fragment(), ItemsInterClickListener {
+    // TODO: Rename and change types of parameters
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -27,15 +29,15 @@ class LegalSystem1Fragment : Fragment(),ItemsInterClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         activity?.title = "Select Year"
-        return inflater.inflate(R.layout.fragment_legal_system1, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_contract1, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestionsLegalSysemI()
+        val questionsList = FirstOrSecond.getQuestionsContractI()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
@@ -54,12 +56,12 @@ class LegalSystem1Fragment : Fragment(),ItemsInterClickListener {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LegalSystem1Fragment.
+         * @return A new instance of fragment Contract1Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LegalSystem1Fragment().apply {
+            Contract1Fragment().apply {
                 arguments = Bundle().apply {
                 }
             }

@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem
+package com.jay.navdrawerwithoutbasicfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,17 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
-import com.jay.navdrawerwithoutbasicfragments.ItemsInterClickListener
-import com.jay.navdrawerwithoutbasicfragments.QuestionsFormat
-import com.jay.navdrawerwithoutbasicfragments.QuestionsFragment
-import com.jay.navdrawerwithoutbasicfragments.R
-import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
-
-class Contract1Fragment : Fragment(), ItemsInterClickListener {
-    // TODO: Rename and change types of parameters
-
+class Contract2Fragment : Fragment(), ItemsInterClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -31,13 +22,12 @@ class Contract1Fragment : Fragment(), ItemsInterClickListener {
     ): View? {
         activity?.title = "Select Year"
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contract1, container, false)
+        return inflater.inflate(R.layout.fragment_contract2, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestionsContractI()
+        val questionsList = FirstOrSecond.getQuestionsContractII()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
@@ -48,7 +38,6 @@ class Contract1Fragment : Fragment(), ItemsInterClickListener {
         // recyclerview to inflate the items.
         recyclerView.adapter = itemSessionAdapter
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -56,12 +45,12 @@ class Contract1Fragment : Fragment(), ItemsInterClickListener {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Contract1Fragment.
+         * @return A new instance of fragment Contract2Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Contract1Fragment().apply {
+            Contract2Fragment().apply {
                 arguments = Bundle().apply {
                 }
             }
@@ -77,6 +66,5 @@ class Contract1Fragment : Fragment(), ItemsInterClickListener {
         val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container,fragment,"questions_fragment")
         transaction.addToBackStack(null)
-        transaction.commit()
-    }
+        transaction.commit()    }
 }

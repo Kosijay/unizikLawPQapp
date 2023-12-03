@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem
+package com.jay.navdrawerwithoutbasicfragments.secondyear
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,10 +15,8 @@ import com.jay.navdrawerwithoutbasicfragments.QuestionsFragment
 import com.jay.navdrawerwithoutbasicfragments.R
 import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
-class Tort1Fragment : Fragment(),ItemsInterClickListener {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class Cons1Fragment : Fragment(), ItemsInterClickListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,13 +30,12 @@ class Tort1Fragment : Fragment(),ItemsInterClickListener {
     ): View? {
         activity?.title = "Select Year"
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tort1, container, false)
+        return inflater.inflate(R.layout.fragment_cons1, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestionsTortI()
+        val questionsList = FirstOrSecond.getQuestionsConsI()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
@@ -57,12 +54,12 @@ class Tort1Fragment : Fragment(),ItemsInterClickListener {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Tort1Fragment.
+         * @return A new instance of fragment Cons1Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Tort1Fragment().apply {
+            Cons1Fragment().apply {
                 arguments = Bundle().apply {
                 }
             }
@@ -78,6 +75,5 @@ class Tort1Fragment : Fragment(),ItemsInterClickListener {
         val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container,fragment,"questions_fragment")
         transaction.addToBackStack(null)
-        transaction.commit()
-    }
+        transaction.commit()    }
 }

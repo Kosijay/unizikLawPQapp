@@ -1,4 +1,4 @@
-package com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem
+package com.jay.navdrawerwithoutbasicfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
-import com.jay.navdrawerwithoutbasicfragments.ItemsInterClickListener
-import com.jay.navdrawerwithoutbasicfragments.QuestionsFormat
-import com.jay.navdrawerwithoutbasicfragments.QuestionsFragment
-import com.jay.navdrawerwithoutbasicfragments.R
-import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
-class Psycho1Fragment : Fragment(), ItemsInterClickListener {
+class Tort2Fragment : Fragment(), ItemsInterClickListener {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,13 +26,12 @@ class Psycho1Fragment : Fragment(), ItemsInterClickListener {
     ): View? {
         activity?.title = "Select Year"
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_psycho1, container, false)
+        return inflater.inflate(R.layout.fragment_tort2, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val questionsList = FirstOrSecond.getQuestionsPsychoI()
+        val questionsList = FirstOrSecond.getQuestionsTortII()
         // Assign employeelist to ItemAdapter
         val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
@@ -54,12 +50,12 @@ class Psycho1Fragment : Fragment(), ItemsInterClickListener {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Psycho1Fragment.
+         * @return A new instance of fragment Tort2Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Psycho1Fragment().apply {
+            Tort2Fragment().apply {
                 arguments = Bundle().apply {
                 }
             }

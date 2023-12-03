@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem.Cons1Fragment
-import com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem.Contract1Fragment
-import com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem.LegalSystem1Fragment
-import com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem.Psycho1Fragment
-import com.jay.navdrawerwithoutbasicfragments.secondyearfirstsem.Tort1Fragment
+import com.jay.navdrawerwithoutbasicfragments.secondyear.Cons1Fragment
+import com.jay.navdrawerwithoutbasicfragments.secondyear.Contract1Fragment
+import com.jay.navdrawerwithoutbasicfragments.secondyear.LegalSystem1Fragment
+import com.jay.navdrawerwithoutbasicfragments.secondyear.Psycho1Fragment
+import com.jay.navdrawerwithoutbasicfragments.secondyear.Tort1Fragment
 
 class CourseAdapter200I(private val courseList: ArrayList<Semester>)  :
     RecyclerView.Adapter<CourseAdapter200I.MyViewHolder>()  {

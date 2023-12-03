@@ -1,28 +1,21 @@
-package com.jay.navdrawerwithoutbasicfragments.coursefragments
+package com.jay.navdrawerwithoutbasicfragments.secondyear
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.jay.navdrawerwithoutbasicfragments.CourseAdapter200II
-import com.jay.navdrawerwithoutbasicfragments.CoursesAdapter
 import com.jay.navdrawerwithoutbasicfragments.FirstOrSecond
+import com.jay.navdrawerwithoutbasicfragments.ItemsInterClickListener
+import com.jay.navdrawerwithoutbasicfragments.QuestionsFormat
+import com.jay.navdrawerwithoutbasicfragments.QuestionsFragment
 import com.jay.navdrawerwithoutbasicfragments.R
+import com.jay.navdrawerwithoutbasicfragments.SessionAdapter
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CourseFragment200Second.newInstance] factory method to
- * create an instance of this fragment.
- */
-class CourseFragment200Second : Fragment() {
+class Tort1Fragment : Fragment(),ItemsInterClickListener {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -30,8 +23,6 @@ class CourseFragment200Second : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -39,24 +30,24 @@ class CourseFragment200Second : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        activity?.title = "200 Level - Select Course"
+        activity?.title = "Select Year"
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_course_200_second, container, false)
+        return inflater.inflate(R.layout.fragment_tort1, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // getting the employeelist
-        val courseList= FirstOrSecond.getCourseData200II()
-        //        TODO Change getCourseData to one specific to the level
+        val questionsList = FirstOrSecond.getQuestionsTortI()
         // Assign employeelist to ItemAdapter
-        val itemAdapter= CourseAdapter200II(courseList)
+        val itemSessionAdapter= SessionAdapter(questionsList, this)
         // Set the LayoutManager that
         // this RecyclerView will use.
-        val recyclerView: RecyclerView =view.findViewById(R.id.recycleViewCourse200II)
+        val recyclerView: RecyclerView =view.findViewById(R.id.session)
         recyclerView.layoutManager = LinearLayoutManager(context)
         // adapter instance is set to the
         // recyclerview to inflate the items.
-        recyclerView.adapter = itemAdapter
+        recyclerView.adapter = itemSessionAdapter
     }
 
     companion object {
@@ -66,16 +57,27 @@ class CourseFragment200Second : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment CourseFragment200Second.
+         * @return A new instance of fragment Tort1Fragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            CourseFragment200Second().apply {
+            Tort1Fragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onItemClick(questionsFormat: QuestionsFormat) {
+        val fragment: Fragment = QuestionsFragment.newInstance(
+            questionsFormat.courseTitle,
+            questionsFormat.session,
+            questionsFormat.semester,
+            questionsFormat.questions
+        )
+        val transaction: FragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container,fragment,"questions_fragment")
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

@@ -108,14 +108,14 @@ object FirstOrSecond {
         val courseList = ArrayList<Semester>()
         val course1 = Semester("Law of Contract II")
         courseList.add(course1)
-        val sem2 = Semester("Constitutional Law II")
-        courseList.add(sem2)
+//        val sem2 = Semester("Constitutional Law II")
+//        courseList.add(sem2)
         val course3 = Semester("Law of Torts II")
         courseList.add(course3)
         val course4 = Semester("Nigerian Legal System II")
         courseList.add(course4)
-        val course5 = Semester("Psychology II")
-        courseList.add(course5)
+/*        val course5 = Semester("Psychology II")
+        courseList.add(course5)*/
         return courseList
     }
 
@@ -317,6 +317,46 @@ object FirstOrSecond {
         questionsList.add(ques1)
         return questionsList
     }
+    fun getQuestionsContractII(): ArrayList<QuestionsFormat> {
+        val questionsList = ArrayList<QuestionsFormat>()
+        val ques1 = QuestionsFormat(
+            "Law Of Contract", "2021/2022", "Second Semester", "SECTION A\n" +
+                    "\n1. Chief Ade is desirous of empowering young Nigerian artists. He occasionally conducts art exhibitions to raise fund to support these start-ups. During such exhibitions, people present artworks made by the local artists as well as internationally renowned artists which artworks are auctioned. The artists by themselves sell off these artworks to Chief Ade prior to the date for exhibition. He fixed this year's exhibition for 10th February 2023. Fineboy Smart, (a scammer) on the 5th day of February 2023 dressed gentlemanly and meets with Chief Ade at the latter's office. Fineboy Smart presents himself as the internationally acclaimed Italian artist, Leonard De Vinci and offers a portrait of Monalisa which unknown to Chief Ade is an imitation of the original. They negotiate for a price and finally settle for N20,000,000. Before making payment, Chief Ade asks Fineboy to present proof of his identity. Fineboy presents an Italian cell phone number which according to him belongs to Leonard's art company (Fineboy's Company) in Italy. Chief Ade places a call across to the said numnber and confirms that the man standing before him is actually the famous artist. However, unknown to Chief Ade, the call receiver was also part of the scam. The contract between the parties was then concluded. On the exhibition day, Mr. Brown, a guest who did a PhD research on the works of Leonard Da Vinci, upon citing the said Monalisa's portrait discovers that the work is a forgery and confronts Chief Ade. Following this revelation Chief Ade became distraught as a result of mistake regarding the true identity of Fineboy.\n" +
+                    "\na. With the aid of authorities advise Chief Ade on the necessary conditions he must fulfill in order to avoid the contract. What are the chances of his having a successful action?\n" +
+                    "\nb. Would your answer to (a) above still be the same if Fineboy met Chief Ade (a tomato seller) in an open market and Fineboy had told Chief Ade that Fineboy was a certain popular celebrity, and for that reason got the tomatoes sold to him on credit after which Fineboy left without later paying for the tomatoes?\n" +
+                    "\n\n2. In other to succeed at law in establishing misrepresentation in contract, what must a party prove?\n" +
+                    "Use a sub-head for each requirement\n" +
+                    "\nb. Tacit acquiesance in another's self-deception does not constitute misrepresentation. At law this is termed \"non-disclosure rule.\" Under what circumstances will this rule not apply?\n" +
+                    "\n" +
+                    "\n\n3.In Allcard v Skinner, the court stated that undue influence is some unfair and improper conduct, some coercion from outside, some over-reaching, some form of cheating and generally, though not always, some personal advantage obtained by the guilty party.\n" +
+                    "Discuss the position of the law which an allegation of undue influence is made under the following circumstances:\n" +
+                    "\na. Where there is no special relationship between the parties\n" +
+                    "\nb. Where there is a special relationship between the parties\n" +
+                    "\nc. How does one rebut the presumption of undue influence?\n" +
+                    "\n" +
+                    "SECTION B\n" +
+                    "\n\n4a. Nze Okenwa is an exporter of cocoa from Nigeria to some European countries. He engaged the service of Teek Shipping company to export, 4000 tons of cocoa to the UK at the cost of L200,000. Parties agreed that, midway into the voyage, Nze Okenwa will pay half of the cost of shipment which was fixed at L100,000 whilec the balance will be paid on delivery at the port. Very close to borders of UK and after making more than half of the voyage, Teek Shipping Company was informed that it cannot enter the UK with the goods because of the new Custom Regulation passed some weeks earlier which prohibits the importation of agricultural products from Nigeria to the UK. Because of this situation, Nze Okenwa has failed to pay Teek Shipping Company the initial L100,000 that was to be paid midway through the journey. Teek Shipping Company has engaged you to take legal action to get Nze Okenwa to pay the entire amount in accordance with their agreement. Citing relevant legal authorities in support of your position. what are:\n" +
+                    "\ni. The legal issue(s) raised from the facts above\n" +
+                    "\nii. The applicable principle(s) of law thereof\n" +
+                    "\niii. The chances of success or otherwise of the suit?\n" +
+                    "\nb Write a short note on Mitigation of Damages.\n" +
+                    "\n" +
+                    "\n\n5. Bayo is a Civil Engincer who was engaged by Chief Ojo to construct a hostel complex near the Institute of Oceanography, Onneh at the cost of N20,000,000.\n" +
+                    "Both parties agreed that Bayo shall source fund to commence the work while Chief Ojo shall pay the full sum at the completion of the complex. As the work progresses, Chief Ojo wrote Bayo informing him that he should stop work, as Chief Ojo is no more interested in the contract. Despite the formal repudiation of the contract, Bayo went on and completed the work and filed a suit to recover the contract sum from Chief Ojo.\n" +
+                    "With relevant legal authorities:\n" +
+                    "\ni. Discuss the legal consequences of Bayo's decision to continue and complete the complex despite Chief Ojo's action\n" +
+                    "\nii. Will Bayo succeed in his suit?\n" +
+                    "\niii. What are the legal consequences if Bayo (the innocent party) had treated the contract as discharged?\n" +
+                    "\n\n6. Mr. Ben lives in Chief Akan's house where Ben occupies a 3 bedroom flat and pays N350,000 per annum. Both Mr. Ben and Chief Akan in a written tenancy agreement executed by them agreed that, Mr. Ben shall be paying his rent on 1st of January every year, while Chief Akan shall promptly be effecting yearly repairs of the flat. Mr. Ben has failed to pay his rents for two consecutive years thereby denying Chief Akan his right to collect rent in his flat. Because of the above, Chief Akan has decided not to affect the yearly repairs in the flat occupied by Mr. Ben despite several demands made by Mr. Ben. Mr. Ben has consulted you to institute and maintain legal action against Chief Akan, praying the court to compel Chief Akan to effect the repair that are long due for over two years.\n" +
+                    "With the aid of legal authorities discuss:\n" +
+                    "\ni. The legal issues in the above facts\n" +
+                    "\nii. The applicable principle(s) of law to the case.\n" +
+                    "\niii. Advice Mr. Ben on the chances of success of his case\n" +
+                    "\nb. Write a short note on Accord and Satisfaction."
+        )
+        questionsList.add(ques1)
+        return questionsList
+    }
 
     fun getQuestionsLegalSysemI(): ArrayList<QuestionsFormat> {
         val questionsList = ArrayList<QuestionsFormat>()
@@ -366,6 +406,40 @@ object FirstOrSecond {
                     "5. a) Define Malicious Prosecution.\n" +
                     "b) State the two opposing interests of social policy which the law seeks to balance.\n" +
                     "c) State and briefly discuss the four elements of this tort with aid of decided cases."
+        )
+        questionsList.add(ques1)
+        return questionsList
+    }
+
+    fun getQuestionsTortII(): ArrayList<QuestionsFormat> {
+        val questionsList = ArrayList<QuestionsFormat>()
+        val ques1 = QuestionsFormat(
+            "Law Of Torts", "2022/2023", "Second Semester", "SECTION A\n" +
+                    "\n1. SAMPSON & CO LTD is an indigenous Nigerian beverage manufacturing company with many registered brands of products. Sometime in January 2023, a Sales Representative of the company discovered that a fake brand of the Company's 'Mixed Yugo Drink' had flooded the Onitsha Relief Market. The company on receipt of the report from the sales representative carried out a cursory market investigation and it was discovered that MR. THOMPSON a former production manager of the company who was sacked in July 2022 for misappropriation of company's fund was the person supplying the fake 'Mixed Yugo Drink' to the traders. The company later involved the Police which on further investigation and search discovered that MR. THOMPSON had converted part of his House in Obosi into a mini fake beverage manufacturing plant. It was discovered that MR. THOMPSON had few months before his sack from the company started the production and sale of fake SAMPSON & CO LTD brand of 'Mixed Yugo Drink'; no wonder the several negative complaints about the company's 'Mixed Yugo Drink' and the sharp decline in sales of the product in recent times.\n" +
+                    "The managing director of SAMPSON & CO LTD has approached you, with the aid of decided cases and authorities advise him fully on the area(s) of Tort involved?\n" +
+                    "\n\n2. In Nigeria, Scholars have for decades involved in discussion as to whether the Federal High Court has exclusive jurisdiction to hear passing off actions or whether the State High Courts and the Federal High Court have concurrent jurisdiction in passing off matters? Discuss.\n" +
+                    "\n" +
+                    "\n\n3. Answer the following questions:\n" +
+                    "\n(a) What is the meaning of Tort of Deceit?\n" +
+                    "\n(b) State the essential elements of Tort of Deceit?\n" +
+                    "\n(c) With the aid of authorities and decided cases do a short brief on four (4) essential elements of Tort of Deceit?\n" +
+                    "\n(d) State three (3) remedies and three (3) defences to Tort of Deceit.?\n" +
+                    "\n" +
+                    "\n\nSECTION B\n" +
+                    "\n\n4. Mr. Oche a notorious herbalist had a poisonous tree on his land though its branches never extended over the boundary . Mr. Udo his boundary neighbour owns a high priced horse which brings him immense fund. Both neighbors have been co-existing peacefully until Mr. Udo's horse on one fateful day reached over the boundary and ate the leaf from the poisonous tree in\n" +
+                    "Mr Oche's compound and died. Mr Udo sued Mr. Oche for damages. With the aid of statutory authorities and or decided cases, advice Mr. Oche on his rights and possible defences to this Tort.\n" +
+                    "\n\n5. The driver of a petrol tanker and his fellow employees were delivering petrol into an underground tank in a filling station in Yenagoa. The driver lit a cigarette and threw away the match stick which resulted in a great damage by fire. The owners of the filling station sued the employers of the driver for damages occasioned by them. Advice the parties.\n" +
+                    "\n" +
+                    "\n6. John and James both own an acre of land each at the farming zone in Anambra West L.G.A. of the state. John cultivates rice and also constructed a mini irrigation dam to supply water to his rice farm. In mid-July after James just concluded the molding of 20,000 six inch solid blocks for his new site, As a result of heavy torrential rain falls that night, the dam got overflowed and ruined most of the blocks in James's site. James vows that John must pay for all the ruined blocks.\n" +
+                    "You have been approached by John for legal advice-\n" +
+                    "\ni. What are his possible defenses, if he is sued by James for nuisance?\n" +
+                    "\nii. Had the town planning authorities marked John's fencing for demolition, and actually demolished the fence causing the over flooding of James's property, are there any possible defenses available to the authorities should they be sued by James, for their actions constituting nuisance to his property.\n" +
+                    "\niii. What if the town planning authorities marked John's fence for demolition and James foreseeing the potential danger that the demolition will cause to his blocks, approaches you for legal advice, what possible legal remedies would be available to him?\n" +
+                    "\n\n7. 'A' and 'B' are long time buddies and are in the same line of trade of \"cotton manufacturing\". The market requires the texture and colour of the cotton to be fluffy and snow white in order to meet international best standards. For some time \"B\" is struggling to meet the required standard thereby causing a diversion of most of his would be clients to A\", whose production outlet and showroom is adjacent to \"B's\" facility. \"B\" scorns with envy and in order to cast aspersions on \"A's\" work, purchases adulterated diesel to power his alternate power source. The fumes from the diesel is channeled towards the location where \"A'\" sundries his processed cotton causing serious damage and stain. \"B\" feigns ignorance and allows this to continue, he is also heard saying that after all he is not the manufacturer of the adulterated diesel and shouldn't be blamed for \"A's\" current misfortunes.\n" +
+                    "\"A\" has approached you for legal advice:\n" +
+                    "\ni. Do this stating the relevant Tort(s) and his chances of success.\n" +
+                    "\nii. What are the relevant factors you think will guide the court I reaching a decision?\n" +
+                    "\niii. What are the differences between physical damage and sensible material damage?"
         )
         questionsList.add(ques1)
         return questionsList
